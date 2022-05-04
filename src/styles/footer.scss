@@ -1,0 +1,117 @@
+@import "./variables.scss";
+
+.footer {
+  background: $firstcolor;
+
+  &__row {
+    padding: 15px 0 0 0;
+    text-align: center;
+		display: flex;
+		flex-wrap: wrap;
+
+		@media (min-width: 480px) {
+			padding: 15px 0;
+		}
+  }
+
+  &__logo {
+    width: 100%;
+    margin: 0 auto;
+    margin: 0 0 15px 0;
+
+    img {
+      width: 50px;
+			color: $secondcolor;
+    }
+
+		@media (min-width: 480px) {
+			margin: 0 0 25px 0;
+		}
+  }
+
+  &__menu {
+		width: 100%;
+    border-bottom: 1px solid $secondcolor;
+    padding: 0 0 20px 0;
+    margin: 0 0 10px 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__list-item {
+    width: 100%;
+
+    &:not(:last-child) {
+      margin: 0 0 15px 0;
+    }
+		
+		@media (min-width: 480px) {
+			width: 33.333%;
+			margin: 0 !important;
+		}
+  }
+
+  &__menu-link {
+    font-size: 16px;
+    padding: 5px;
+    text-transform: uppercase;
+    color: $secondcolor;
+
+    &:hover {
+      color: #ff7415;
+    }
+
+		@media (min-width: 1024px) {
+			font-size: 18px;
+		}
+  }
+
+  &__number {
+		width: 100%;
+    padding: 10px;
+    span,
+    a {
+      color: $secondcolor;
+      font-size: 18px;
+    }
+
+			a:hover {
+				color: #ff7415;
+			}
+
+		@media (min-width: 480px) {
+			width: 50%;
+		}
+  }
+
+  &__social {
+		width: 100%;
+    display: flex;
+    justify-content: center;
+
+		@media (min-width: 480px) {
+			width: 50%;
+		}
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.social {
+  &__link {
+  }
+	
+  &__icon {
+    cursor: pointer;
+    fill: #aaa;
+
+    &:hover {
+      fill: #ff7415;
+    }
+  }
+}

@@ -1,0 +1,114 @@
+@import "./variables.scss";
+
+.offer {
+  &__title {
+    padding: 30px 0 0 0;
+    margin: 0 0 10px 0;
+  }
+
+  &__slider {
+    cursor: grab;
+
+    &.grabbing {
+      cursor: grabbing;
+    }
+  }
+
+  &__content {
+  }
+
+  &__cards {
+    padding: 20px 0 30px;
+  }
+
+  &__card {
+    display: flex;
+
+    @media (min-width: 768px) {
+      flex: 0 0 50%;
+    }
+
+    @media (min-width: 1024px) {
+      flex: 0 0 33.333%;
+    }
+  }
+}
+
+.card {
+
+  &__content {
+    padding: 20px 0;
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid $secondcolor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $fourthcolor;
+  }
+
+  &__label {
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $firstcolor;
+    border-bottom: 1px solid $secondcolor;
+    padding: 0 0 20px 0;
+  }
+
+  &__img {
+    padding: 5px 15%;
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      max-width: 100%;
+    }
+    p {
+      padding: 20px 0 0 0;
+      font-size: 18px;
+    }
+  }
+
+  &__price {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid $secondcolor;
+    padding: 20px 0 0 0;
+  }
+
+  &__btn {
+    background: $secondcolor;
+    font-size: 22px;
+    border: 1px solid $firstcolor;
+    border-radius: 15px;
+    padding: 8px 15px;
+
+    &:before {
+      content: "Кликни, чтобы начать";
+      font-size: 16px;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 300%;
+      opacity: 0;
+      transition: opacity 0.5s ease 0s;
+    }
+
+    &:hover {
+      &:before {
+        opacity: 1;
+      }
+    }
+
+    &:after {
+      content: "₽";
+      margin: 0 0 0 5px;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@import "./styles/variables.scss";
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+}
+
+body {
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  height: 100%;
+  min-width: 300px;
+  padding: 0 8%;
+}
+
+.title {
+  font-size: 30px;
+  text-align: center;
+
+  &__content {
+  }
+
+  @media (min-width: 480px) {
+    font-size: 34px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 40px;
+  }
+}
+
+button {
+  position: relative;
+
+  &:active {
+    top: 3px;
+    left: 2px;
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+
+  &:hover, &:focus {
+    box-shadow: 1px 3px 0 $firstcolor;
+  }
+}
